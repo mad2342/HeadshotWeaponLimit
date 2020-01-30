@@ -49,8 +49,10 @@
     <Reference Include="UnityEngine.UI" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\Link\MadLogger.cs">
+      <Link>MadLogger.cs</Link>
+    </Compile>
     <Compile Include="HeadshotWeaponLimit.cs" />
-    <Compile Include="Logger.cs" />
     <Compile Include="Patches\GameLogic.cs" />
     <Compile Include="Patches\UserInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

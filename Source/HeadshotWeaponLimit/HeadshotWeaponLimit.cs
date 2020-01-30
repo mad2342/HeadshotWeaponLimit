@@ -11,7 +11,7 @@ namespace HeadshotWeaponLimit
         internal static string LogPath;
         internal static string ModDirectory;
         internal static Settings Settings;
-        // BEN: Debug (0: nothing, 1: errors, 2:all)
+        // BEN: DebugLevel (0: nothing, 1: error, 2: debug, 3: info)
         internal static int DebugLevel = 1;
 
         public static void Init(string directory, string settings)
