@@ -21,7 +21,7 @@ namespace HeadshotWeaponLimit.Patches
                 }
                 catch (Exception e)
                 {
-                    Logger.LogError(e);
+                    Logger.Error(e);
                 }
             }
 
@@ -29,7 +29,7 @@ namespace HeadshotWeaponLimit.Patches
             {
                 try
                 {
-                    //Logger.LogLine("[CombatHUDAttackModeSelector_DisplayedLocation_POSTFIX] Called.");
+                    //Logger.Debug("[CombatHUDAttackModeSelector_DisplayedLocation_POSTFIX] Called.");
 
                     CombatHUD ___HUD = (CombatHUD)AccessTools.Property(typeof(CombatHUDAttackModeSelector), "HUD").GetValue(__instance, null);
 
@@ -77,7 +77,7 @@ namespace HeadshotWeaponLimit.Patches
                         //string pluralizeSuffix = maxAllowedWeapons > 1 ? "S" : "";
                         string pluralizeSuffix = weaponsToDisable > 1 ? "S" : "";
 
-                        //Logger.LogLine("[CombatHUDAttackModeSelector_DisplayedLocation_POSTFIX] Appending headshot note...");
+                        //Logger.Debug("[CombatHUDAttackModeSelector_DisplayedLocation_POSTFIX] Appending headshot note...");
                         if (weaponsToDisable >= 1)
                         {
                             Color c = LazySingletonBehavior<UIManager>.Instance.UIColorRefs.whiteHalf;
@@ -119,7 +119,7 @@ namespace HeadshotWeaponLimit.Patches
                 }
                 catch (Exception e)
                 {
-                    Logger.LogError(e);
+                    Logger.Error(e);
                 }
             }
         }
@@ -139,13 +139,13 @@ namespace HeadshotWeaponLimit.Patches
                     }
                     if (__instance.SelectionType == SelectionType.FireMorale)
                     {
-                        Logger.LogLine("[SelectionStateFire_FireButtonString_POSTFIX] Appending placeholder note...");
+                        Logger.Debug("[SelectionStateFire_FireButtonString_POSTFIX] Appending placeholder note...");
                         __result = $" ^^^ SELECT A LOCATION FOR CALLED SHOT ^^^ \n<size=80%> </size>";
                     }   
                 }
                 catch (Exception e)
                 {
-                    Logger.LogError(e);
+                    Logger.Error(e);
                 }
             }
         }
@@ -158,7 +158,7 @@ namespace HeadshotWeaponLimit.Patches
             {
                 try
                 {
-                    //Logger.LogLine("[CombatHUDCalledShotPopUp_UpdateMechDisplay_POSTFIX] Visually disabling head display if it may not be targeted...");
+                    //Logger.Debug("[CombatHUDCalledShotPopUp_UpdateMechDisplay_POSTFIX] Visually disabling head display if it may not be targeted...");
 
                     if (__instance.ShownAttackDirection == AttackDirection.FromBack)
                     {
@@ -193,7 +193,7 @@ namespace HeadshotWeaponLimit.Patches
                 }
                 catch (Exception e)
                 {
-                    Logger.LogError(e);
+                    Logger.Error(e);
                 }
             }
         }
